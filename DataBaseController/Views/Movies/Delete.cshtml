@@ -1,0 +1,45 @@
+﻿@model MvcMovieModels.Models.Uzytkownicy
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Usuń</h2>
+
+<h3>Jesteś pewien, że chcesz to usunąć tego użytkownika?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Imie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwisko)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nazwisko)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataUrodzenia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataUrodzenia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Login)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Login)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Usuń" class="btn btn-default" /> |
+        <a asp-action="Index">Wróć do listy</a>
+    </form>
+</div>
